@@ -12,6 +12,11 @@ tool, package install, generated assets or environment variables are needed.
 | `support.html` | Support information and email |
 | `privacy.html` | Current data handling and development-test disclosures |
 | `terms.html` | Basic website terms; available for Google's terms URL field |
+
+The 29 October refund-help update adds Apple's refund request link and instructions
+to Support and Terms. These are local source edits, not a published site update.
+Copy the changed files to the public repository when ready to publish; the
+privacy policy has no new data collection to describe for this link.
 | `styles.css` | Shared colors, fonts, spacing and mobile layout |
 
 Only public content belongs here. Never copy OAuth credential JSON, API keys,
@@ -38,32 +43,47 @@ serves a project path. Use the actual URL GitHub provides; no repository name or
 GitHub account has been assumed. A user-site repository is convenient for
 verifying the hostname root, but do not replace an existing site unintentionally.
 
-## Google Search Console and OAuth
+## Google Search Console and OAuth — ownership blocker
 
-1. Sign in to Search Console with the Google account that owns the Cloud project.
-2. Add a **URL-prefix** property for the exact published homepage URL, including
-   `https://` and any repository path. Choose **HTML tag**.
-3. The owner-supplied Google verification tag is now saved in `index.html`'s
-   `<head>`. It is intended to be public; OAuth client secrets and refresh tokens
-   are not. If you later verify another property/account, use its exact supplied
-   tag and preserve any verification tags still in use.
-4. Copy the updated file into the public repo, commit/push, wait for deployment,
-   and confirm the tag appears in the live page source before clicking Verify.
-5. Keep the tag after verification. If Google requires ownership at the hostname
-   root as well, verify that root site; a project-path verification does not
-   establish control of its parent. Do not claim ownership of all `github.io`.
-6. In OAuth Branding, use the actual live homepage, `privacy.html` and
-   `terms.html` URLs under the same base. Use the hostname without scheme/path
-   when entering Authorized domains, if Google accepts it. Inspect any rejection
-   rather than switching to a different domain or bypassing verification.
-7. Check Google's actual Branding/Audience result. Search Console ownership is
-   one check; it does not guarantee OAuth branding/scope approval or production
-   publishing. No custom-domain purchase is assumed by this experiment.
+Owner reports the published homepage is
+`https://chenle16.github.io/elemii-site/`, but Google Branding says the homepage
+is not registered to the owner. Search Console property/account results have not
+been independently inspected. The web browsing tool could not retrieve the live
+site; that does not establish a website outage.
+
+The supplied HTML verification tag remains in `index.html`'s `<head>`. It can
+verify a Search Console **URL-prefix property**, but Google's dedicated
+[OAuth domain-verification troubleshooting](https://support.google.com/cloud/answer/13804266)
+now explicitly requires a **Domain property verified at DNS level**, rather than
+a URL-prefix/Site property, with the correct Google Cloud Project Owner account.
+Earlier advice to use the HTML tag as the potential OAuth solution was incomplete.
+
+The developer does not control DNS for the free `chenle16.github.io` hostname,
+so this site cannot complete that documented DNS-verification route as-is.
+Do not repeat tag edits, move the tag to another GitHub page or create more
+URL-prefix properties expecting them to establish DNS ownership.
+
+A custom domain under the owner's DNS control can still use free GitHub Pages
+hosting and these exact site files. If that route is adopted:
+
+1. Configure the owned custom domain for this Pages site and HTTPS.
+2. Add its **Domain** property in Search Console with the Cloud Project Owner
+   account, add Google's supplied DNS TXT record, and verify.
+3. Update Branding homepage/privacy/terms URLs and Authorized domains to the new
+   domain; resolve Google's actual checks before publishing or reauthorizing.
+4. Retain verification records and review the live pages. Site verification,
+   brand/scope approval and publishing remain distinct checks.
+
+No domain purchase, DNS change or account change is authorized by this guide.
+The existing GitHub Pages URL remains usable as an ordinary website. These
+files remain the local editing source and can be reused unchanged under a
+custom domain. OAuth personal-use exceptions require a separate review and
+should not be treated as an automatic bypass of this observed ownership check.
 
 The Google service name currently is **Elemii Email Test**, also explained on
 the homepage/privacy page. Before public production, reconcile the service name,
 feature status, policy date, real providers and retention with the actual release.
-The current copy describes a development email pilot, not live paid delivery.
+The current copy describes private synthetic report-download tests, the locally tested thirty-day PDF/temporary-content policy and historical email tests. Customer generation and purchases are not enabled. Failed-job/support-mail/metadata periods remain open; these local edits do not publish the site.
 
 ## Preview locally
 
