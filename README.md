@@ -12,12 +12,12 @@ tool, package install, generated assets or environment variables are needed.
 | `support.html` | Support information and email |
 | `privacy.html` | Current data handling and development-test disclosures |
 | `terms.html` | Basic website terms; available for Google's terms URL field |
+| `styles.css` | Shared colors, fonts, spacing and mobile layout |
 
 The 29 October refund-help update adds Apple's refund request link and instructions
-to Support and Terms. These are local source edits, not a published site update.
-Copy the changed files to the public repository when ready to publish; the
-privacy policy has no new data collection to describe for this link.
-| `styles.css` | Shared colors, fonts, spacing and mobile layout |
+to Support and Terms. The owner confirmed publishing those files. The refund
+link itself introduces no new data collection. The subsequent Privacy publication
+for unpaid-order cleanup is recorded below.
 
 Only public content belongs here. Never copy OAuth credential JSON, API keys,
 `.wrangler`, app source, test outputs or birth records into the website repo.
@@ -100,3 +100,10 @@ verified by Google; the site must first be published publicly.
 References: [GitHub Pages publishing](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site),
 [Search Console verification](https://support.google.com/webmasters/answer/9008080),
 [Google Branding requirements](https://support.google.com/cloud/answer/15549049).
+
+The later 29 October unpaid-checkout update publishes `privacy.html` for the
+24-hour unpaid-source policy. Commit `311bb33293b66d51180f941ac5532f1f1edff669`
+in `ChenLe16/elemii-site` is deployed by GitHub Pages; the public Privacy page
+matches this source exactly. The matching backend is deployed with generation
+off and the signed app is installed/launched. Future edits here still require
+an explicit publication; this folder does not automatically sync.
