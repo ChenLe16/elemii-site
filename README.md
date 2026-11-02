@@ -4,6 +4,13 @@ This folder is the editable source for the public information site. It is
 independent of the iPhone app, article publisher and report services. No build
 tool, package install, generated assets or environment variables are needed.
 
+**2 November release update — publication pending:** copy the updated
+`privacy.html`, `support.html` and `terms.html` to the public repository. Privacy
+includes seven-day paid waiting, optional birth longitude and minimum-record
+purposes. Terms distinguishes public billing from free sandbox testing and states
+English PDF/30-day online availability. Local edits do not publish the site.
+See the [App Store privacy checklist](../docs/APP_STORE_PRIVACY_CHECKLIST.md).
+
 ## Files
 
 | File | Edit for |
